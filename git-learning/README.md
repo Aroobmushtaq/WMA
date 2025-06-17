@@ -55,11 +55,23 @@ feat(auth): add user login form with validation
 
 ## Common Types
 
-Type	      Use it for…              	                 Example
-feat	      New features	                             feat(cart): add checkout button
-fix	          Bug fixes	                                 fix(api): correct response handling
-docs	      Documentation only changes	             docs(readme): update installation steps
-style	      Code style changes (white-space, etc.)	 style(home): fix indentation
-refactor      Code refactoring (not bug fix or feat)	 refactor(nav): simplify logic
-test	      Adding or updating tests	                 test(user): add unit test for login
-chore	      Maintenance stuff (build, deps, etc.)	     chore: update dependencies
+- **feat**: Use when adding a new feature  
+  _Example_: `feat(cart): add checkout button`
+
+- **fix**: Use when fixing a bug  
+  _Example_: `fix(api): correct response handling`
+
+- **docs**: Use when making changes to documentation only  
+  _Example_: `docs(readme): update installation steps`
+
+- **style**: Use for code style changes (formatting, spaces, etc.)  
+  _Example_: `style(home): fix indentation`
+
+- **refactor**: Use for code refactoring (no new features or bug fixes)  
+  _Example_: `refactor(nav): simplify logic`
+
+- **test**: Use when adding or updating tests  
+  _Example_: `test(user): add unit test for login`
+
+- **chore**: Use for routine tasks like dependency updates or config changes  
+  _Example_: `chore: update dependencies`
