@@ -39,3 +39,27 @@ git reset HEAD~1             # Undo last commit but keep the changes
 git reset --hard HEAD~1      # Completely remove last commit and changes (⚠️ irreversible)
 git reset commit hash                 # commited changes (for many commits)
 ```
+
+---
+
+## ✍️ Commit Message Guidelines (Conventional Commits)
+We follow the Conventional Commits format for writing meaningful commit messages.
+
+###  Format
+
+<type>(optional scope): <description>
+
+### Example 
+
+feat(auth): add user login form with validation
+
+## Common Types
+
+Type	      Use it for…              	                 Example
+feat	      New features	                             feat(cart): add checkout button
+fix	          Bug fixes	                                 fix(api): correct response handling
+docs	      Documentation only changes	             docs(readme): update installation steps
+style	      Code style changes (white-space, etc.)	 style(home): fix indentation
+refactor      Code refactoring (not bug fix or feat)	 refactor(nav): simplify logic
+test	      Adding or updating tests	                 test(user): add unit test for login
+chore	      Maintenance stuff (build, deps, etc.)	     chore: update dependencies
