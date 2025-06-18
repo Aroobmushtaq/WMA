@@ -47,7 +47,7 @@ We follow the Conventional Commits format for writing meaningful commit messages
 
 ###  Format
 
-<type>(optional scope): <description>
+type(optional scope): description
 
 ### Example 
 
