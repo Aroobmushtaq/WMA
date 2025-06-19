@@ -46,3 +46,6 @@ Next.js is a React framework for building full-stack web applications with built
 - Slower first load, but faster navigation after that.
 - Not good for SEO (because content loads later).
 - Best for: dashboards, logged-in areas, or apps where SEO doesn't matter.
+
+---
+ ### we make a component CSR by using "use client"
