@@ -1,7 +1,13 @@
 const express = require('express')
+const mongoose = require('mongoose');
 const app = express()
 app.use(express.json())
 const port = 3000
+const userSchema = new mongoose.Schema({
+    name:String,
+    age:Number
+})
+const User = mongoose.model('User',userSchema)              
 app.get('/details',(req,res)=>{
     res.status(200).json([
         {name:"asifa",age:22},
@@ -42,6 +48,32 @@ app.post('/login', (req, res) => {
 
     res.status(200).json({ message: `Welcome, ${username}!` });
 });
+app.post('/user',async(req,res)=>{
+    try{
+        const user = new User(req.body)
+        await user.save()
+        res.status(201).json({data:user,status:true,message:"user created successfully"})
+    }
+    catch(error){
+        res.status(500).json({ error: "Failed to create user" ,
+            status:false,
+            data:[],
+            message:"user not created"
+        });
+    }
+})  
 app.listen(port,()=>{
     console.log(`app is runing on port number ${port}`)
 })
+async function main() {
+    try{
+        await mongoose.connect('mongodb+srv://Aroob-Mushtaq:NWXmhFGFLnftIG5U@cluster0.whbp21l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+        console.log("connected to mongodb")
+    }
+    catch(error){
+        console.log(error)
+        console.log("error in connecting to mongodb")
+    }
+    
+  }
+  main()
