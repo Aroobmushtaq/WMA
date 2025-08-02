@@ -1,4 +1,4 @@
-#  Learning from [Web and Mobile Application Development Mastery](https://www.youtube.com/watch?v=AMQ4pYFT7cM&list=PLOfLYVXrwqXpqZ8TGJIZCmpncjy7xX5Fi) by [Naveed Sarwar (YouTube Channel)](https://www.youtube.com/@NaveedSarwar)
+#  Learning from [Web and Mobile Application Development Mastery](https://www.youtube.com/watch?v=AMQ4pYFT7cM&list=PLOfLYVXrwqXpqZ8TGJIZCmpncjy7xX5Fi) by [Naveed Sarwar (YouTube Channel)](https://www.youtube.com/@NaveedSarwarOfficial)
 
 This repository contains my **practice work and mini projects** based on the **Full Stack Development playlist** I am following on YouTube.  
 I am learning **Frontend, Backend, and Mobile App Development** step-by-step and documenting my journey here.
@@ -21,13 +21,11 @@ I am learning **Frontend, Backend, and Mobile App Development** step-by-step and
 
 ##  Repository Content
 - Practice code files
-- Concept-based notes
-- Small web & mobile projects
-- Code snippets for revision
+- Small  projects
 
 ##  YouTube Playlist
 - **Playlist Name**: [Web and Mobile Application Development Mastery](https://www.youtube.com/watch?v=AMQ4pYFT7cM&list=PLOfLYVXrwqXpqZ8TGJIZCmpncjy7xX5Fi)
-- **Channel Name**: [Naveed Sarwar](https://www.youtube.com/@NaveedSarwar)
+- **Channel Name**: [Naveed Sarwar](https://www.youtube.com/@NaveedSarwarOfficial)
 
 ---
 
