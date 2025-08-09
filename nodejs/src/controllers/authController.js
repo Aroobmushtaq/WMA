@@ -1,8 +1,10 @@
 const Auth = require('../models/authModel');
 const jwt = require('jsonwebtoken');
 const env = require('dotenv');
+const { sendWelcomeEmail } = require('../utils/nodemailer');
 env.config();
 const secretKey = process.env.secret_key;
+
 const registerUser = async (req, res) => {
     try {
         const { fullName, email, password, role } = req.body;
@@ -16,6 +18,7 @@ const registerUser = async (req, res) => {
         res.status(500).json({ error: "Failed to register user" });
     }
 }
+
 const loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -24,10 +27,20 @@ const loginUser = async (req, res) => {
         if (!user) {
             return res.status(401).json({ error: "Invalid email or password" });
         }
-        res.status(200).json({ message: "Login successful", user,token});
+
+        // ADDED: Send welcome email after successful login
+        const previewUrl = await sendWelcomeEmail(user.email, user.fullName);
+
+        res.status(200).json({ 
+            message: "Login successful", 
+            user,
+            token,
+            previewUrl // ADDED: preview link for email
+        });
+
     } catch (error) {
         res.status(500).json({ error: "Failed to login user" });
     }
 }
+
 module.exports = { registerUser, loginUser };
-const express = require('express');
